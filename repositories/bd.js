@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import pg from 'pg'
 function conectar (){
 
@@ -7,11 +8,11 @@ function conectar (){
 
     var conn = new pg.Pool(
         {
-            user: 'postgres',
-            host: 'localhost',
-            database: 'Teste',
-            password:'2022#estudante',
-            port: 5432
+            user: process.env.DB_USER,
+            host: process.env.DB_HOST,
+            database: process.env.DB_NAME,
+            password: process.env.DB_PASSWORD,
+            port: process.env.DB_PORT
         }
     )
     global.connection = conn

@@ -105,7 +105,13 @@ npm install
 
 ### 3. Configure o banco de dados
 
-Configure uma instância PostgreSQL e a conexão utilizada em `repositories/bd.js`.
+Configure uma instância PostgreSQL e copie o arquivo de exemplo para criar sua configuração local:
+
+```bash
+cp .env.example .env
+```
+
+Preencha no arquivo `.env` as variáveis `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD` e `DB_NAME` com as credenciais da sua instância PostgreSQL.
 
 O projeto utiliza uma tabela `cliente` com os campos `cpf`, `nome`, `nasc` e `salario`.
 
